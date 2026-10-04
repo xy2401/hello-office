@@ -1,0 +1,63 @@
+:root {
+  --vp-c-brand-1: #b54708;
+  --vp-c-brand-2: #93370d;
+  --vp-c-brand-3: #b54708;
+  --vp-c-brand-soft: rgba(181, 71, 8, .12);
+  --doc-action-bg: #b54708;
+  --doc-action-hover-bg: #93370d;
+  --doc-action-active-bg: #772e11;
+}
+
+.dark {
+  --vp-c-brand-1: #fdba74;
+  --vp-c-brand-2: #fed7aa;
+  --vp-c-brand-soft: rgba(253, 186, 116, .12);
+}
+
+.VPHome .VPHero .name, .VPHome .VPHero .text { letter-spacing: -.025em; }
+.VPHome .VPHero .image-src { filter: drop-shadow(0 18px 28px rgba(181, 71, 8, .16)); }
+.VPHome .VPFeature { border-color: var(--vp-c-divider); }
+.VPHome .vp-doc { font-size: 16px; line-height: 28px; }
+.VPHome .vp-doc table { display: block; overflow-x: auto; }
+.office-playground, .template-downloads { margin-block: var(--doc-card-spacing); }
+.office-playground { padding: 24px; border: 1px solid var(--vp-c-divider); border-radius: var(--doc-card-radius); background: var(--vp-c-bg-soft); }
+.office-playground fieldset { border: 0; padding: 0; margin: 0 0 24px; }
+.office-playground legend { margin-bottom: 8px; font-weight: 600; }
+.office-modes, .office-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.office-modes label { display: flex; gap: 6px; align-items: center; }
+.office-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.office-form { display: grid; gap: 16px; align-content: start; }
+.office-form label { display: grid; gap: 6px; font-weight: 600; }
+.office-playground :is(input:not([type=radio]), textarea, select) { width: 100%; padding: 8px 10px; border: 1px solid var(--vp-c-divider); border-radius: 6px; color: var(--vp-c-text-1); background: var(--vp-c-bg); font: inherit; }
+.office-playground textarea { resize: vertical; min-height: 88px; }
+.office-playground h2, .office-playground h3 { border: 0; margin-top: 0; }
+.office-preview { padding: 20px; border: 1px solid var(--vp-c-divider); border-radius: 10px; background: var(--vp-c-bg); overflow-wrap: anywhere; }
+.office-preview pre { white-space: pre-wrap; font: inherit; margin: 0; }
+.office-slides { display: grid; gap: 12px; }
+.office-slides article { padding: 16px; border: 1px solid var(--vp-c-divider); border-radius: 8px; }
+.office-slides h4 { margin: 4px 0 8px; }
+.office-slides p { white-space: pre-wrap; margin: 0; }
+.office-playground .office-actions { margin-top: 24px; }
+.office-playground button { padding: 8px 12px; border-radius: 6px; border: 1px solid var(--vp-c-divider); background: var(--vp-c-bg); font-weight: 600; cursor: pointer; }
+.office-playground button:hover { border-color: var(--vp-c-brand-1); }
+.office-playground button.primary { background: var(--doc-action-bg); color: var(--doc-action-text); border-color: transparent; }
+.office-playground button.primary:hover { background: var(--doc-action-hover-bg); }
+.office-playground button:disabled { opacity: .5; cursor: not-allowed; }
+.office-status { min-height: 28px; color: var(--vp-c-text-2); }
+.office-error { color: var(--doc-danger-text); }
+.office-summary { display: flex; flex-wrap: wrap; gap: 16px; padding-block: 12px; }
+.office-summary span { display: grid; gap: 4px; }
+.office-table-scroll { overflow-x: auto; }
+.office-playground .budget-table { width: 100%; display: table; margin: 12px 0; }
+.budget-table th { white-space: nowrap; }
+.budget-table input { min-width: 100px; }
+.budget-table td:first-child input { min-width: 140px; }
+.budget-table .money { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.template-downloads { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.template-downloads a { display: grid; gap: 8px; padding: 20px; border: 1px solid var(--vp-c-divider); border-radius: var(--doc-card-radius); background: var(--vp-c-bg-soft); text-decoration: none; }
+.template-downloads a:hover { border-color: var(--vp-c-brand-1); }
+.template-downloads span { color: var(--vp-c-text-2); font-size: 14px; }
+@media (max-width: 767px) {
+  .office-grid, .template-downloads { grid-template-columns: minmax(0, 1fr); }
+  .office-playground { padding: 16px; }
+}
