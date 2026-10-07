@@ -12,7 +12,7 @@ Use Node.js 22.16+ and PowerShell 7. `npm run docs:dev` uses port 5179. `npm run
 
 Preserve Chinese explanations, lowercase routes, two-space indentation, and PascalCase Vue filenames. Teach concrete tasks and deliverables. Distinguish Microsoft 365, perpetual editions, web, Windows and macOS when feature availability differs; cite official sources for version claims. Do not imply that the playground runs Office engines or exports native Office documents. CSV is practice data, not a workbook.
 
-Copy public templates from hello-world's `design/shared/`; keep copies identical and import the baseline before brand CSS. Use `withBase` for component links to local pages and downloads. Keep forms labeled, errors readable, and local-storage failures recoverable.
+Keep the public template copies in this repository aligned with the shared design baseline and import the baseline before brand CSS. Document development and deployment from this repository's own root. Use `withBase` for component links to local pages and downloads. Keep forms labeled, errors readable, and local-storage failures recoverable.
 
 ## Permissions and Validation
 

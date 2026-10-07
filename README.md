@@ -13,7 +13,7 @@ npm ci
 npm run docs:dev
 ```
 
-固定地址为 `http://127.0.0.1:5179/`，避开 Hello Docker 的 5178。也可从 hello-world 根目录执行 `npm --prefix hello-office run docs:dev`，或 `.\start-all.ps1 -Project hello-office`。根启动器的 `-Stop` 停止所有已记录服务。
+本地开发地址为 `http://127.0.0.1:5179/`。保持当前终端运行，按 `Ctrl+C` 停止开发服务。
 
 ```powershell
 npm run check:content
@@ -24,7 +24,7 @@ npm run docs:preview
 
 内容检查只读取页面、导航和本地链接；单元测试验证预算计算、输入恢复和导出规则。构建、安装依赖与验证须遵守当前会话及仓库的执行许可约定。
 
-通过环境变量 `DOCS_BASE` 支持子路径，例如 `$env:DOCS_BASE='/hello-office/'`。公共模板保留在本项目内，独立构建不依赖父目录或其他子项目。
+通过环境变量 `DOCS_BASE` 支持子路径，例如 `$env:DOCS_BASE='/hello-office/'`。公共模板保留在本仓库内，安装、构建与部署均在本仓库完成。
 
 ## 内容与目录
 
@@ -49,13 +49,11 @@ npm run docs:preview
 
 ## 仓库组织
 
-本项目使用独立 Git 仓库，SSH 地址为 `git@github.com:xy2401/hello-office.git`，在 hello-world 中按 Git submodule 管理。也可以独立克隆：
+本项目使用独立 Git 仓库，SSH 地址为 `git@github.com:xy2401/hello-office.git`：
 
 ```powershell
 git clone git@github.com:xy2401/hello-office.git
 cd hello-office
 ```
 
-独立构建不依赖 hello-world 或兄弟项目。根仓库应在 Office 提交已推送后，再提交对应子模块引用；部署地址另行配置。
-
-公共设计维护源是 hello-world 的 `design/shared/`。修改公共模板时由根目录同步，领域样式和办公内容在本项目维护。
+依赖、构建脚本与部署配置由本仓库维护。公共设计模板的副本位于 `docs/.vitepress/`；领域样式和办公内容在本项目维护。
