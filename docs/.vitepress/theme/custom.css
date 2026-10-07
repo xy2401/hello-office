@@ -14,6 +14,45 @@
   --vp-c-brand-soft: rgba(253, 186, 116, .12);
 }
 
+/* Product identities follow the same navigation/sidebar pattern as the other sites. */
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a):is([href*="/products/word/"], [href*="/products/powerpoint/"], [href*="/products/excel/"])::before,
+.VPSidebarItem.level-0:has(a[href*="/products/word/"], a[href*="/products/powerpoint/"], a[href*="/products/excel/"]) > .item .text::before,
+.office-product-page .vp-doc h1::before {
+  content: '';
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  margin-right: .35rem;
+  vertical-align: -.2rem;
+  background: var(--office-product-logo) center / contain no-repeat;
+}
+
+.office-product-word,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href*="/products/word/"],
+.VPSidebarItem.level-0:has(a[href*="/products/word/"]) {
+  --office-product-logo: url('/icons/word.svg');
+}
+
+.office-product-powerpoint,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href*="/products/powerpoint/"],
+.VPSidebarItem.level-0:has(a[href*="/products/powerpoint/"]) {
+  --office-product-logo: url('/icons/powerpoint.svg');
+}
+
+.office-product-excel,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href*="/products/excel/"],
+.VPSidebarItem.level-0:has(a[href*="/products/excel/"]) {
+  --office-product-logo: url('/icons/excel.svg');
+}
+
+.office-product-page .vp-doc h1::before {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: .3em;
+  vertical-align: -.15em;
+}
+
 .VPHome .VPHero .name, .VPHome .VPHero .text { letter-spacing: -.025em; }
 .VPHome .VPHero .image-src { filter: drop-shadow(0 18px 28px rgba(181, 71, 8, .16)); }
 .VPHome .VPFeature { border-color: var(--vp-c-divider); }

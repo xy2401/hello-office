@@ -19,15 +19,21 @@ hero:
       text: 获取练习素材
       link: /reference/templates
 features:
-  - icon: 📝
+  - icon:
+      src: /icons/word.svg
+      alt: ''
     title: Word · 写清楚
     details: 用样式建立结构，用目录与分页管理长文档，用批注和修订完成审阅。
     link: /products/word/
-  - icon: 📊
+  - icon:
+      src: /icons/powerpoint.svg
+      alt: ''
     title: PowerPoint · 讲明白
     details: 先组织结论和证据，再用母版、图表与讲稿做好一次汇报。
     link: /products/powerpoint/
-  - icon: 🧮
+  - icon:
+      src: /icons/excel.svg
+      alt: ''
     title: Excel · 算准确
     details: 整理明细、理解公式引用、检查查找结果，用透视表和图表回答问题。
     link: /products/excel/

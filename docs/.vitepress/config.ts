@@ -17,6 +17,10 @@ export default defineConfig({
   transformPageData(pageData) {
     if (!pageData.relativePath.startsWith('products/')) return
     const classes = String(pageData.frontmatter.pageClass || '').split(/\s+/).filter(Boolean)
+    const product = pageData.relativePath.split('/')[1]
+    if (['word', 'powerpoint', 'excel'].includes(product)) {
+      classes.push('office-product-page', `office-product-${product}`)
+    }
     pageData.frontmatter.pageClass = [...new Set([...classes, 'product-doc-page'])].join(' ')
   },
   themeConfig: {
